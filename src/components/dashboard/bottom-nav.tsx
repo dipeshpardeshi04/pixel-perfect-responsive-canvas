@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { House, LayoutGrid, Plus, ClipboardCheck, ChartColumn, type LucideIcon } from "lucide-react";
+import { House, LayoutGrid, ClipboardCheck, ChartColumn, type LucideIcon } from "lucide-react";
 
 type Tab = { icon: LucideIcon; label: string; badge?: number };
 
-const left: Tab[] = [
+const tabs: Tab[] = [
   { icon: House, label: "Home" },
   { icon: LayoutGrid, label: "Dashboard" },
-];
-
-const right: Tab[] = [
   { icon: ClipboardCheck, label: "Tasks", badge: 3 },
   { icon: ChartColumn, label: "Reports" },
 ];
@@ -18,7 +15,7 @@ function NavItem({ tab, active, onClick }: { tab: Tab; active: boolean; onClick:
   return (
     <button
       onClick={onClick}
-      className={`relative flex flex-col items-center gap-1 pt-0.5 ${
+      className={`relative flex flex-1 flex-col items-center gap-1 pt-0.5 ${
         active ? "text-primary" : "text-muted-foreground"
       }`}
     >
@@ -42,24 +39,8 @@ export function BottomNav() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40">
       <div className="relative mx-auto max-w-md">
-        <button
-          aria-label="Add new"
-          className="absolute -top-7 left-1/2 z-10 grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full bg-foreground shadow-float"
-        >
-          <Plus className="h-7 w-7 text-background" strokeWidth={2.5} />
-        </button>
-
-        <nav className="grid grid-cols-5 items-start rounded-t-3xl border-t border-border bg-card px-2 pt-3.5 shadow-card">
-          {left.map((tab) => (
-            <NavItem
-              key={tab.label}
-              tab={tab}
-              active={active === tab.label}
-              onClick={() => setActive(tab.label)}
-            />
-          ))}
-          <span />
-          {right.map((tab) => (
+        <nav className="grid grid-cols-4 items-start rounded-t-3xl border-t border-border bg-card px-3 pt-3.5 shadow-card">
+          {tabs.map((tab) => (
             <NavItem
               key={tab.label}
               tab={tab}

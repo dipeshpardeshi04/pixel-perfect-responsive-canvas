@@ -9,8 +9,8 @@ const stats = [
 
 export function OverviewSection() {
   return (
-    <section className="pt-7">
-      <div className="flex items-center justify-between gap-2 px-4 pb-4">
+    <section className="pt-5">
+      <div className="flex items-center justify-between gap-2 px-4 pb-3">
         <h2 className="whitespace-nowrap text-[21px] font-extrabold tracking-tight text-foreground">
           Today&rsquo;s Overview
         </h2>
@@ -25,19 +25,19 @@ export function OverviewSection() {
           {stats.map(({ icon: Icon, value, label, target, progress }) => (
             <div
               key={label}
-              className="w-[42vw] max-w-[170px] shrink-0 rounded-2xl border border-border bg-card p-4 shadow-card"
+              className="w-[40vw] max-w-[160px] shrink-0 rounded-2xl border border-border bg-card p-3.5 shadow-card"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary/10">
-                <Icon className="h-6 w-6 text-primary" strokeWidth={2.2} />
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10">
+                <Icon className="h-5 w-5 text-primary" strokeWidth={2.2} />
               </span>
-              <p className="mt-3 text-[28px] font-extrabold leading-none tracking-tight text-foreground">
+              <p className="mt-2.5 text-[24px] font-extrabold leading-none tracking-tight text-foreground">
                 {value}
               </p>
-              <p className="mt-2 text-[13px] font-semibold leading-tight text-foreground">{label}</p>
+              <p className="mt-1.5 text-[12.5px] font-semibold leading-tight text-foreground">{label}</p>
               {target ? (
-                <p className="mt-1 text-[13px] font-medium text-muted-foreground">{target}</p>
+                <p className="mt-0.5 text-[12.5px] font-medium text-muted-foreground">{target}</p>
               ) : null}
-              <div className="mt-3 h-[7px] w-full overflow-hidden rounded-full bg-secondary">
+              <div className="mt-2.5 h-[6px] w-full overflow-hidden rounded-full bg-secondary">
                 <div
                   className="h-full rounded-full bg-primary"
                   style={{ width: `${progress}%` }}
