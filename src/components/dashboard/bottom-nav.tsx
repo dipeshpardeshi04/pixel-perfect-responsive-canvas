@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { House, LayoutGrid, Plus, ClipboardCheck, ChartColumn, type LucideIcon } from "lucide-react";
+import { House, LayoutGrid, ClipboardCheck, ChartColumn, type LucideIcon } from "lucide-react";
 
 type Tab = { icon: LucideIcon; label: string; badge?: number };
 

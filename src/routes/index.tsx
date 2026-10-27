@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { StatusBar, AppHeader, SearchBar } from "@/components/dashboard/app-header";
+import { StatusBar, AppHeader } from "@/components/dashboard/app-header";
 import { LaunchBanner } from "@/components/dashboard/launch-banner";
 import { OverviewSection } from "@/components/dashboard/overview-section";
 import { QuickActions } from "@/components/dashboard/quick-actions";
@@ -33,7 +33,6 @@ function Index() {
     <div className="mx-auto min-h-screen max-w-md bg-background shadow-card">
       <StatusBar />
       <AppHeader />
-      <SearchBar />
       <LaunchBanner />
       <OverviewSection />
       <QuickActions />

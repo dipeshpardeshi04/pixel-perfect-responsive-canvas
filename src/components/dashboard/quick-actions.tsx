@@ -26,8 +26,8 @@ const actions: Action[] = [
 
 export function QuickActions() {
   return (
-    <section className="pt-7">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 pb-4">
+    <section className="pt-5">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 pb-3">
         <h2 className="text-[24px] font-extrabold tracking-tight text-foreground">Quick Actions</h2>
         <button className="flex shrink-0 items-center gap-0.5 text-[14px] font-bold text-foreground">
           View All
