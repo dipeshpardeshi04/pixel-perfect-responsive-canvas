@@ -10,12 +10,12 @@ const stats = [
 export function OverviewSection() {
   return (
     <section className="pt-7">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 pb-4">
-        <h2 className="text-[24px] font-extrabold tracking-tight text-foreground">
+      <div className="flex items-center justify-between gap-2 px-4 pb-4">
+        <h2 className="whitespace-nowrap text-[21px] font-extrabold tracking-tight text-foreground">
           Today&rsquo;s Overview
         </h2>
-        <div className="flex shrink-0 items-center gap-2 text-[14px] font-semibold text-foreground">
-          <Calendar className="h-4.5 w-4.5" strokeWidth={2.2} />
+        <div className="flex shrink-0 items-center gap-2 whitespace-nowrap text-[13px] font-semibold text-foreground">
+          <Calendar className="h-4 w-4" strokeWidth={2.2} />
           Mon, 26 Oct 2026
         </div>
       </div>

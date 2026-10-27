@@ -17,7 +17,7 @@ const bars = [
 
 export function PerformanceCard() {
   return (
-    <section className="px-4 pt-7 pb-36">
+    <section className="px-4 pt-7 pb-28">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 pb-4">
         <h2 className="text-[24px] font-extrabold tracking-tight text-foreground">Performance</h2>
         <button className="flex shrink-0 items-center gap-1 text-[14px] font-semibold text-foreground">

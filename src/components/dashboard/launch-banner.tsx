@@ -8,8 +8,8 @@ export function LaunchBanner() {
     <section className="px-4">
       <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-5 shadow-card">
         {/* backdrop circle + product shot */}
-        <div className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2">
-          <div className="relative grid h-[190px] w-[190px] place-items-center">
+        <div className="pointer-events-none absolute right-[-14px] top-1/2 -translate-y-1/2">
+          <div className="relative grid h-[175px] w-[175px] place-items-center">
             <div className="absolute inset-0 rounded-full bg-secondary" />
             <img
               src={productLaunch}
@@ -17,7 +17,7 @@ export function LaunchBanner() {
               width={1024}
               height={1024}
               loading="lazy"
-              className="relative z-10 h-[185px] w-auto -translate-x-3 translate-y-1 object-contain mix-blend-multiply"
+              className="relative z-10 h-[170px] w-auto translate-y-1 object-contain mix-blend-multiply"
             />
           </div>
         </div>
