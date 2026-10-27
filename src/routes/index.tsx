@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { StatusBar, AppHeader, SearchBar } from "@/components/dashboard/app-header";
+import { LaunchBanner } from "@/components/dashboard/launch-banner";
+import { OverviewSection } from "@/components/dashboard/overview-section";
+import { QuickActions } from "@/components/dashboard/quick-actions";
+import { PerformanceCard } from "@/components/dashboard/performance-card";
+import { BottomNav } from "@/components/dashboard/bottom-nav";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "CBO ERP | 9050 — Field Dashboard" },
+      {
+        name: "description",
+        content:
+          "Daily calls, doctor and chemist visits, quick actions and target performance for the CBO ERP pharma field team.",
+      },
+      { property: "og:title", content: "CBO ERP | 9050 — Field Dashboard" },
+      {
+        property: "og:description",
+        content:
+          "Daily calls, doctor and chemist visits, quick actions and target performance for the CBO ERP pharma field team.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="mx-auto min-h-screen max-w-md bg-background shadow-card">
+      <StatusBar />
+      <AppHeader />
+      <SearchBar />
+      <LaunchBanner />
+      <OverviewSection />
+      <QuickActions />
+      <PerformanceCard />
+      <BottomNav />
     </div>
   );
 }
