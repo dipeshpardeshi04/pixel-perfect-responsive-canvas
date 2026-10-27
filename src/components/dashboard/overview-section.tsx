@@ -9,8 +9,8 @@ const stats = [
 
 export function OverviewSection() {
   return (
-    <section className="pt-7">
-      <div className="flex items-center justify-between gap-2 px-4 pb-4">
+    <section className="pt-5">
+      <div className="flex items-center justify-between gap-2 px-4 pb-3">
         <h2 className="whitespace-nowrap text-[21px] font-extrabold tracking-tight text-foreground">
           Today&rsquo;s Overview
         </h2>
