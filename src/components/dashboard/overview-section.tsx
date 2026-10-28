@@ -21,23 +21,27 @@ export function OverviewSection() {
       </div>
 
       <div className="relative">
-        <div className="no-scrollbar flex gap-3 overflow-x-auto px-4 pb-1">
+        <div className="no-scrollbar flex gap-2.5 overflow-x-auto px-4 pb-1">
           {stats.map(({ icon: Icon, value, label, target, progress }) => (
             <div
               key={label}
-              className="w-[40vw] max-w-[160px] shrink-0 rounded-2xl border border-border bg-card p-3.5 shadow-card"
+              className="w-[40vw] max-w-[164px] shrink-0 rounded-2xl border border-border bg-card p-3.5 shadow-card"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10">
-                <Icon className="h-5 w-5 text-primary" strokeWidth={2.2} />
-              </span>
-              <p className="mt-2.5 text-[24px] font-extrabold leading-none tracking-tight text-foreground">
-                {value}
+              <div className="flex items-center gap-2.5">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/10">
+                  <Icon className="h-5 w-5 text-primary" strokeWidth={2.2} />
+                </span>
+                <span className="text-[26px] font-extrabold leading-none tracking-tight text-foreground">
+                  {value}
+                </span>
+              </div>
+              <p className="mt-2.5 truncate text-[13px] font-semibold leading-tight text-foreground">
+                {label}{" "}
+                {target ? (
+                  <span className="font-medium text-muted-foreground">{target}</span>
+                ) : null}
               </p>
-              <p className="mt-1.5 text-[12.5px] font-semibold leading-tight text-foreground">{label}</p>
-              {target ? (
-                <p className="mt-0.5 text-[12.5px] font-medium text-muted-foreground">{target}</p>
-              ) : null}
-              <div className="mt-2.5 h-[6px] w-full overflow-hidden rounded-full bg-secondary">
+              <div className="mt-2 h-[6px] w-full overflow-hidden rounded-full bg-secondary">
                 <div
                   className="h-full rounded-full bg-primary"
                   style={{ width: `${progress}%` }}
