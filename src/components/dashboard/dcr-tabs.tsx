@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const tabs = ["DCR", "MASTER", "TRANSACTION", "REPORTS"];
+const tabs = ["DCR", "MASTER", "TRANSACTION"];
 
 export function DcrTabs() {
   const [active, setActive] = useState("DCR");
