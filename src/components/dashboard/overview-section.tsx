@@ -1,10 +1,9 @@
-import { Calendar, ChevronRight, Phone, Users, Store, ClipboardCheck } from "lucide-react";
+import { Calendar, Phone, Users, Store } from "lucide-react";
 
 const stats = [
   { icon: Phone, value: "12", label: "Daily Calls", target: "/ 20", progress: 60 },
   { icon: Users, value: "8", label: "Doctors Visited", target: "/ 15", progress: 53 },
   { icon: Store, value: "5", label: "Chemists Visited", target: "/ 10", progress: 50 },
-  { icon: ClipboardCheck, value: "3", label: "Pending Tasks", target: null, progress: 55 },
 ];
 
 export function OverviewSection() {
