@@ -19,43 +19,34 @@ export function OverviewSection() {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="no-scrollbar flex gap-2.5 overflow-x-auto px-4 pb-1">
-          {stats.map(({ icon: Icon, value, label, target, progress }) => (
-            <div
-              key={label}
-              className="w-[40vw] max-w-[164px] shrink-0 rounded-2xl border border-border bg-card p-3.5 shadow-card"
-            >
-              <div className="flex items-center gap-2.5">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/10">
-                  <Icon className="h-5 w-5 text-primary" strokeWidth={2.2} />
-                </span>
-                <span className="text-[26px] font-extrabold leading-none tracking-tight text-foreground">
-                  {value}
-                </span>
-              </div>
-              <p className="mt-2.5 truncate text-[13px] font-semibold leading-tight text-foreground">
-                {label}{" "}
-                {target ? (
-                  <span className="font-medium text-muted-foreground">{target}</span>
-                ) : null}
-              </p>
-              <div className="mt-2 h-[6px] w-full overflow-hidden rounded-full bg-secondary">
-                <div
-                  className="h-full rounded-full bg-primary"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
+      <div className="grid grid-cols-3 gap-2.5 px-4">
+        {stats.map(({ icon: Icon, value, label, target, progress }) => (
+          <div
+            key={label}
+            className="rounded-2xl border border-border bg-card p-3 shadow-card"
+          >
+            <div className="flex items-center gap-2">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary/10">
+                <Icon className="h-4.5 w-4.5 text-primary" strokeWidth={2.2} />
+              </span>
+              <span className="text-[24px] font-extrabold leading-none tracking-tight text-foreground">
+                {value}
+              </span>
             </div>
-          ))}
-        </div>
-
-        <button
-          aria-label="Scroll overview"
-          className="absolute right-2 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-border bg-card shadow-card"
-        >
-          <ChevronRight className="h-4 w-4 text-foreground" strokeWidth={2.5} />
-        </button>
+            <p className="mt-2 text-[11.5px] font-semibold leading-tight text-foreground">
+              {label}{" "}
+              {target ? (
+                <span className="font-medium text-muted-foreground">{target}</span>
+              ) : null}
+            </p>
+            <div className="mt-2 h-[6px] w-full overflow-hidden rounded-full bg-secondary">
+              <div
+                className="h-full rounded-full bg-primary"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
