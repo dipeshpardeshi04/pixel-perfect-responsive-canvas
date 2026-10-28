@@ -21,7 +21,7 @@ const actions: Action[] = [
   { icon: BriefcaseMedical, label: "Dr. Call" },
   { icon: Bell, label: "Dr. Reminder Call" },
   { icon: FlaskConical, label: "Dr. Sample" },
-  { icon: MortarPestle, label: "Chemist Call" },
+  { icon: Pill, label: "Chemist Call" },
   { icon: BellPlus, label: "Chemist Reminder Call" },
   { icon: Headphones, label: "Customer Call" },
   { icon: ListTodo, label: "Non Listed Calls" },
