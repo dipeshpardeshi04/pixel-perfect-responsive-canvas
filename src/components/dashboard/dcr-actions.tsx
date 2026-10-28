@@ -36,10 +36,10 @@ export function DcrActions() {
         {actions.map(({ icon: Icon, label }) => (
           <button
             key={label}
-            className="flex flex-col items-center gap-2.5 rounded-2xl border border-border bg-card px-2 py-5 shadow-card"
+            className="flex flex-col items-center gap-2 rounded-2xl border border-border bg-card px-2 py-4 shadow-card"
           >
-            <span className="grid h-14 w-14 place-items-center rounded-full bg-secondary">
-              <Icon className="h-7 w-7 text-foreground" strokeWidth={2} />
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-secondary">
+              <Icon className="h-5.5 w-5.5 text-foreground" strokeWidth={2} />
             </span>
             <span className="text-center text-[12.5px] font-semibold leading-tight text-foreground">
               {label}

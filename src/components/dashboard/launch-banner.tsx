@@ -6,7 +6,7 @@ const dots = [0, 1, 2];
 export function LaunchBanner() {
   return (
     <section className="px-4">
-      <div className="relative overflow-hidden rounded-3xl border border-border bg-accent p-5 shadow-card">
+      <div className="relative overflow-hidden rounded-3xl border border-border bg-accent px-4 py-3.5 shadow-card">
         {/* backdrop circle + product shot */}
         <div className="pointer-events-none absolute right-[-16px] top-1/2 -translate-y-1/2">
           <div className="relative grid h-[200px] w-[200px] place-items-center">
@@ -40,7 +40,7 @@ export function LaunchBanner() {
           </button>
         </div>
 
-        <div className="relative z-20 mt-4 flex justify-center gap-2">
+        <div className="relative z-20 mt-1.5 flex justify-center gap-2">
           {dots.map((d) => (
             <span
               key={d}
