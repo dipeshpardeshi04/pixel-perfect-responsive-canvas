@@ -3,7 +3,7 @@ import {
   BriefcaseMedical,
   Bell,
   FlaskConical,
-  MortarPestle,
+  Pill,
   BellPlus,
   Headphones,
   ListTodo,
