@@ -10,7 +10,6 @@ import {
   ReceiptText,
   ClipboardList,
   SquareCheck,
-  ChevronRight,
   type LucideIcon,
 } from "lucide-react";
 
@@ -32,24 +31,19 @@ const actions: Action[] = [
 
 export function DcrActions() {
   return (
-    <section className="pt-5">
-      <h2 className="px-4 pb-3 text-[21px] font-extrabold tracking-tight text-foreground">
-        DCR Actions
-      </h2>
-
-      <div className="grid grid-cols-3 gap-2.5 px-4">
+    <section className="pt-4">
+      <div className="grid grid-cols-3 gap-3 px-4">
         {actions.map(({ icon: Icon, label }) => (
           <button
             key={label}
-            className="flex items-center gap-2 rounded-xl border border-border bg-card p-2.5 text-left shadow-card"
+            className="flex flex-col items-center gap-2.5 rounded-2xl border border-border bg-card px-2 py-5 shadow-card"
           >
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-secondary">
-              <Icon className="h-4.5 w-4.5 text-foreground" strokeWidth={2.2} />
+            <span className="grid h-14 w-14 place-items-center rounded-full bg-secondary">
+              <Icon className="h-7 w-7 text-foreground" strokeWidth={2} />
             </span>
-            <span className="flex-1 text-[11.5px] font-semibold leading-tight text-foreground">
+            <span className="text-center text-[12.5px] font-semibold leading-tight text-foreground">
               {label}
             </span>
-            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" strokeWidth={2.5} />
           </button>
         ))}
       </div>
