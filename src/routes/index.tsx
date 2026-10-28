@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { StatusBar, AppHeader } from "@/components/dashboard/app-header";
 import { LaunchBanner } from "@/components/dashboard/launch-banner";
 import { OverviewSection } from "@/components/dashboard/overview-section";
-import { QuickActions } from "@/components/dashboard/quick-actions";
+import { DcrTabs } from "@/components/dashboard/dcr-tabs";
+import { DcrActions } from "@/components/dashboard/dcr-actions";
 import { PerformanceCard } from "@/components/dashboard/performance-card";
 import { BottomNav } from "@/components/dashboard/bottom-nav";
 
@@ -35,7 +36,8 @@ function Index() {
       <AppHeader />
       <LaunchBanner />
       <OverviewSection />
-      <QuickActions />
+      <DcrTabs />
+      <DcrActions />
       <PerformanceCard />
       <BottomNav />
     </div>
